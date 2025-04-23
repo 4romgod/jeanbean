@@ -1,0 +1,64 @@
+/* Background colors */
+.bg-custom-red {
+  background-color: #dc3545;
+}
+
+.bg-custom-blue {
+  background-color: #0a3371;
+}
+
+.bg-custom-blue-lt {
+  background-color: #0a337148;
+}
+
+.bg-custom-yellow {
+  background-color: #ffc107;
+}
+
+.bg-custom-white {
+  background-color: #ffffff;
+}
+
+
+/* Border colors */
+.border-custom-red {
+  border-color: #dc3545 !important;
+}
+
+.border-custom-blue {
+  border-color: #0a3371 !important;
+}
+
+.border-custom-blue-lt {
+  border-color: #0a337148 !important;
+}
+
+.border-custom-yellow {
+  border-color: #ffc107 !important;
+}
+
+.border-custom-white {
+  border-color: #ffffff !important;
+}
+
+
+/* Text colors */
+.text-custom-red {
+  color: #dc3545 !important;
+}
+
+.text-custom-blue {
+  color: #0a3371 !important;
+}
+
+.text-custom-blue-lt {
+  color: #0a337148 !important;
+}
+
+.text-custom-yellow {
+  color: #ffc107 !important;
+}
+
+.text-custom-white {
+  color: #ffffff !important;
+}
