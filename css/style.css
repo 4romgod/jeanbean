@@ -306,10 +306,6 @@ h6,
     transition: .5s;
 }
 
-.about-img img:hover {
-    background: var(--primary) !important;
-}
-
 
 /*** Classes ***/
 .classes-item {

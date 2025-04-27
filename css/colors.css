@@ -3,16 +3,24 @@
   background-color: #dc3545;
 }
 
+.bg-custom-red-lt {
+  background-color: #dc3546a2;
+}
+
 .bg-custom-blue {
   background-color: #0a3371;
 }
 
 .bg-custom-blue-lt {
-  background-color: #0a337148;
+  background-color: #0a337191;
 }
 
 .bg-custom-yellow {
   background-color: #ffc107;
+}
+
+.bg-custom-yellow-lt {
+  background-color: #ffc10788;
 }
 
 .bg-custom-white {
