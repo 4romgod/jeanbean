@@ -1,0 +1,18 @@
+{
+  "name": "jeanbean",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "copy-animate": "mkdir -p build/css/animate/ && cp node_modules/animate.css/animate.min.css build/css/animate/",
+    "copy-bootstrap": "mkdir -p build/css/bootstrap/ && cp node_modules/bootstrap/dist/css/bootstrap.min.css build/css/bootstrap/",
+    "copy-owlcarousel": "mkdir -p build/lib/owlcarousel/ && cp -r node_modules/owl.carousel/dist/* build/lib/owlcarousel/",
+    "build": "npm run copy-bootstrap && npm run copy-animate && npm run copy-owlcarousel"
+  },
+  "dependencies": {
+    "animate.css": "3.5.2",
+    "bootstrap": "5.3.5",
+    "owl.carousel": "2.2.0"
+  }
+}
