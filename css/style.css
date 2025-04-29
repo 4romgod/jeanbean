@@ -241,7 +241,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/yellow_uniform.jpeg) center center no-repeat;
     background-size: cover;
 }
 
@@ -418,6 +418,7 @@ h6,
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
+    text-decoration: none !important;
 }
 
 .footer .btn.btn-link::before {

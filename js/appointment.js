@@ -1,3 +1,5 @@
+import { send } from '@emailjs/browser';
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 
