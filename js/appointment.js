@@ -1,27 +1,24 @@
-// import { send } from '@emailjs/browser';
-
 document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init('d1LZ6ZARetgVcPw1n'); // <-- Your public key
+
   const form = document.querySelector("form");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
 
-    // Collect form data
-    const guardianName = document.getElementById("gname").value;
-    const guardianEmail = document.getElementById("gmail").value;
-    const childName = document.getElementById("cname").value;
-    const childAge = document.getElementById("cage").value;
-    const message = document.getElementById("message").value;
+    const from_name = document.getElementById("name").value || '';
+    const from_email = document.getElementById("email").value || '';
+    const subject = document.getElementById("subject").value || '';
+    const message = document.getElementById("message").value || '';
 
-    // Log the form data (you can replace this with an API call or other logic)
-    console.log("Form Submitted:");
-    console.log("Guardian Name:", guardianName);
-    console.log("Guardian Email:", guardianEmail);
-    console.log("Child Name:", childName);
-    console.log("Child Age:", childAge);
-    console.log("Message:", message);
-
-    // Optionally, reset the form
-    form.reset();
+    const emailParams = { from_email, from_name, subject, message };
+    console.log(emailParams);
+    emailjs.send('service_q9drsdh', 'template_ehjqomn', emailParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        form.reset();
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
   });
 });
