@@ -192,6 +192,49 @@ img {
     color: var(--primary);
 }
 
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(220, 53, 69, 0.12);
+    transition: background .3s ease, transform .2s ease;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler:hover {
+    background: rgba(220, 53, 69, 0.2);
+    transform: translateY(-1px);
+}
+
+.navbar-toggler .toggler-icon {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.navbar-toggler .toggler-icon + .toggler-icon {
+    margin-top: 5px;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .navbar.sticky-top {
     top: -100px;
     transition: .5s;
@@ -230,9 +273,13 @@ img {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    background: #0a3371;
 }
 
 .header-carousel .owl-carousel-item img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     object-fit: cover;
     height: 100%;
 }
@@ -307,14 +354,18 @@ img {
 }
 
 .page-header {
-    background-color: rgba(10, 51, 113, 0.8);
-    background-image: url(../img/yellow_uniform.jpeg);
+    background-image:
+        linear-gradient(180deg, rgba(10, 51, 113, 0.35), rgba(10, 51, 113, 0.35)),
+        url(../img/yellow_uniform.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: multiply;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
 }
 
 .page-header h1 {
@@ -555,10 +606,34 @@ img {
 
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
-        min-height: 540px;
+        min-height: 600px;
     }
 
     .facility-item {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-carousel .owl-carousel-item {
+        min-height: 560px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-carousel {
+        padding: 0 14px;
+    }
+
+    .page-header {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .page-header .container {
+        text-align: center;
+        width: 100%;
     }
 }
